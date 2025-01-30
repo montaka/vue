@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <title>Vue.jsのサンプル</title>
+    <script src="https://unpkg.com/vue@3.0.0/dist/vue.global.js"></script>
+    <head>
+        <body>
+            <h1>Vue3</h1>
+            <div id="app">
+                <div v-html="message"></div>
+            </div>
+                    <script>
+                        const list=['One','Two','Three']
+                        const appdata={
+                            data(){
+                                return{
+                                    message:`<ul>
+                                        <li>${list[0]}</li>
+                                        <li>${list[1]}</li>
+                                        <li>${list[2]}</li>
+                                        </ul>`                                        
+                                }
+                            }
+                        }
+                       Vue.createApp(appdata).mount('#app')
+                    </script>
+                
+            
+        </body>
+    </head>
+</html>
